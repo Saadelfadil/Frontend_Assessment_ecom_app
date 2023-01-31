@@ -1,24 +1,34 @@
-import logo from './logo.svg';
 import './App.css';
+import Navbar from './components/Navbar';
+import ContactNavrbar from './components/ContactNavrbar';
+import Card from './components/Card';
+import Products from './components/Products';
+import styles from './style';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      {/* <div className='w-full overflow-hidden'>
+        <div className={`${styles.paddingX} ${styles.flexCenter}`}>
+          <div className={`${styles.boxWidth}`}>
+            <ContactNavrbar />
+            <Navbar />
+          </div>
+        </div>
+      </div> */}
+
+      <div className=' bg-slate-100 w-full h-screen'>
+        <div>
+          <div className='w-full flex py-6 justify-between items-center nav bg-white'>
+           <ContactNavrbar />
+          </div>
+          <div className='w-full flex py-6 justify-between items-center nav'>
+            <Navbar />
+          </div>
+        </div>
+        <Products />
+      </div>
+    </>
   );
 }
 
