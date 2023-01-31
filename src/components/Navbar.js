@@ -1,11 +1,11 @@
 import React, { useState } from 'react'
-import { close, logo, menu } from '../assets'
+import { close, menu } from '../assets'
 import { navLinks } from '../constants';
 
 import SearchInput from "../components/SearchInput";
 
 const Navbar = () => {
-    const [active, setActive] = useState("Home");
+    // const [active, setActive] = useState("Home");
     const [toggle, setToggle] = useState(false);
 
   return (

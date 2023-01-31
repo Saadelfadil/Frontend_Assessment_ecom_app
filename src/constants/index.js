@@ -1,5 +1,44 @@
 import { people01, people02, people03, facebook, instagram, linkedin, twitter, airbnb, binance, coinbase, dropbox, send, shield, star  } from "../assets";
 
+export const products = [
+  {
+    id: 1,
+    name: 'Basic Tee',
+    href: '#',
+    imageSrc: 'https://tailwindui.com/img/ecommerce-images/product-page-01-related-product-01.jpg',
+    imageAlt: "Front of men's Basic Tee in black.",
+    price: '$35',
+    color: 'Black',
+  },
+  {
+    id: 2,
+    name: 'Bscssbcsjss',
+    href: '#',
+    imageSrc: 'https://tailwindui.com/img/ecommerce-images/product-page-01-related-product-02.jpg',
+    imageAlt: "Front of men's Basic Tee in s,sjbjjsbljkbs.",
+    price: '$79',
+    color: 'Black',
+  },
+  {
+    id: 3,
+    name: 'Bscssbcsjss',
+    href: '#',
+    imageSrc: 'https://tailwindui.com/img/ecommerce-images/product-page-01-related-product-03.jpg',
+    imageAlt: "Front of men's Basic Tee in s,sjbjjsbljkbs.",
+    price: '$39',
+    color: 'White',
+  },
+  {
+    id: 4,
+    name: 'Bscssbcsjss',
+    href: '#',
+    imageSrc: 'https://tailwindui.com/img/ecommerce-images/product-page-01-related-product-04.jpg',
+    imageAlt: "Front of men's Basic Tee in s,sjbjjsbljkbs.",
+    price: '$999',
+    color: 'Red',
+  },
+]
+
 export const navLinks = [
   {
     id: "Shop",
