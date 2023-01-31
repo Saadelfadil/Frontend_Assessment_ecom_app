@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { close, menu } from '../assets'
+import { fav, notifi, shop, close, menu} from '../assets'
 import { navLinks } from '../constants';
 
 import SearchInput from "../components/SearchInput";
@@ -24,11 +24,11 @@ const Navbar = () => {
         ))}
       </ul>
 
-      <div className="sm:hidden flex flex-1 justify-end items-center">
+      <div className="sm:hidden flex flex-1 justify-start items-center">
         <img src={toggle ? close : menu} alt="menu" className="w-[28px] h-[28px] object-contain" onClick={() => setToggle((prev) => !prev)} />
       </div>
 
-      <div className={`${toggle ? 'flex' : 'hidden'} p-6 bg-black-gradient absolute top-20 right-0 mx-4 my-2 min-w-[140px] rounded-xl sidebar`}>
+      <div className={`${toggle ? 'flex' : 'hidden'} p-6 bg-slate-50 absolute top-28 left-14 z-10 mx-4 rounded-xl sidebar`}>
 
           <ul className="list-none flex flex-col justify-end items-center flex-1">
             {navLinks.map((nav, ind) => (
@@ -43,8 +43,16 @@ const Navbar = () => {
           </ul>
       </div>
 
-    <div className='justify-between items-center flex-1'>
-        <SearchInput />
+    <div className='lg:flex lg:gap-32 gap-10 justify-center items-center'>
+      <div className='justify-between items-center flex'>
+          <SearchInput />
+      </div>
+
+      <div className="sm:flex hidden justify-between gap-12">
+        <img src={fav} alt="fav" className="w-[28px] h-[28px]"/>
+        <img src={shop} alt="shop" className="w-[28px] h-[28px]"/>
+        <img src={notifi} alt="notifi" className="w-[28px] h-[28px]"/>
+      </div>
     </div>
     </nav>
   );
