@@ -4,8 +4,7 @@ import { navLinks } from '../constants';
 
 import SearchInput from "../components/SearchInput";
 
-const Navbar = () => {
-    // const [active, setActive] = useState("Home");
+const Navbar = (props) => {
     const [toggle, setToggle] = useState(false);
 
   return (
@@ -45,10 +44,10 @@ const Navbar = () => {
 
     <div className='lg:flex lg:gap-32 gap-10 justify-center items-center'>
       <div className='justify-between items-center flex'>
-          <SearchInput />
+          <SearchInput setSearch={props.setSearch}/>
       </div>
 
-      <div className="sm:flex hidden justify-between gap-12">
+      <div className="sm:flex hidden justify-between gap-12 pt-2">
         <img src={fav} alt="fav" className="w-[28px] h-[28px]"/>
         <img src={shop} alt="shop" className="w-[28px] h-[28px]"/>
         <img src={notifi} alt="notifi" className="w-[28px] h-[28px]"/>

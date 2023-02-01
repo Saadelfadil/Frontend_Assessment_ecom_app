@@ -2,8 +2,12 @@ import './App.css';
 import Navbar from './components/Navbar';
 import ContactNavrbar from './components/ContactNavrbar';
 import Products from './components/Products';
+import { useState } from 'react';
 
 function App() {
+
+  const [search, setSearch] = useState('');
+
   return (
     <>
       <div className=' bg-slate-100 w-full h-screen'>
@@ -12,10 +16,10 @@ function App() {
            <ContactNavrbar />
           </div>
           <div className='w-full flex py-6 justify-between items-center nav'>
-            <Navbar />
+            <Navbar setSearch={setSearch}/>
           </div>
         </div>
-        <Products />
+        <Products search={search}/>
       </div>
     </>
   );
